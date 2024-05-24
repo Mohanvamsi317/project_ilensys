@@ -1,0 +1,20 @@
+
+requests                 Version:2.31.0
+pathlib                  Version:1.0.1
+pandas                   Version:2.2.2
+openpyxl                 Version:3.1.2
+logging                  Version:0.4.9.6
+tqdm                     Version:4.66.2
+Directory storage stucture:
+The file is saved in the following way if the file approval type is by part:
+folder_name-->normalized_name --> compilance --> manufacturer_component number(component table) -->file(if bypart)
+                                    |
+                                    |--> blanket --> file(if blanket)
+                                    |
+                                    |--> partseries --> file(if partseries)
+                                    |
+                                    |--> multiplebyparts --> file(if bypart mapped to same manufacturer but multiple components)
+atom_mfr_docs\compilance\Feuerherdt_REACH.pdf
+            
+if the file is mappedd to multiple manufacturers but approval type is by part then the file is stored in the following manner:
+folder_name(root folder)-->compilance(directory) --> file(bypart but mapped to multiple manufacturers)
